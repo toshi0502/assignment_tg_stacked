@@ -1,22 +1,20 @@
-// home_viewmodel.dart
-
-import 'package:assignment_tg/routes.dart';
-import 'package:assignment_tg/services/navigation_service.dart';
 import 'package:stacked/stacked.dart';
+import 'package:stacked_services/stacked_services.dart';
 
 class HomeViewModel extends BaseViewModel {
-  // final NavigationService _navigationService = locator<NavigationService>();
-
   final NavigationService _navigationService;
 
-  HomeViewModel(
-      this._navigationService); // Inject NavigationService in constructor
+  HomeViewModel(this._navigationService);
 
   Future<void> navigateToScheduledView() async {
-    _navigationService.navigateTo(Routes['scheduledView']!);
+    _navigationService.navigateTo('/scheduled');
   }
 
   Future<void> navigateToMyActivityView() async {
-    _navigationService.navigateTo(Routes['myActivityView']!);
+    await _navigationService.navigateTo('/activity');
+  }
+
+  Future<void> navigateToEditScedule() async {
+    await _navigationService.navigateTo('/editActivity');
   }
 }

@@ -16,13 +16,13 @@ class ScheduleService {
       final response =
           await http.post(Uri.parse(createUrl), body: jsonEncode(scheduleData));
       if (response.statusCode == 200) {
-        return true; // Schedule created successfully
+        return true;
       } else {
-        return false; // Failed to create schedule
+        return false;
       }
     } catch (e) {
       print("Error creating schedule: $e");
-      return false; // Failed to create schedule
+      return false;
     }
   }
 
@@ -37,11 +37,11 @@ class ScheduleService {
         }
         return schedules;
       } else {
-        return []; // Failed to fetch schedules
+        return []; //
       }
     } catch (e) {
       print("Error fetching schedules: $e");
-      return []; // Failed to fetch schedules
+      return [];
     }
   }
 
@@ -50,13 +50,13 @@ class ScheduleService {
       final response =
           await http.post(Uri.parse(updateUrl), body: jsonEncode(updatedData));
       if (response.statusCode == 200) {
-        return true; // Schedule updated successfully
+        return true;
       } else {
-        return false; // Failed to update schedule
+        return false;
       }
     } catch (e) {
       print("Error updating schedule: $e");
-      return false; // Failed to update schedule
+      return false;
     }
   }
 
@@ -64,13 +64,13 @@ class ScheduleService {
     try {
       final response = await http.get(Uri.parse('$deleteUrl?id=$id'));
       if (response.statusCode == 200) {
-        return true; // Schedule deleted successfully
+        return true;
       } else {
-        return false; // Failed to delete schedule
+        return false;
       }
     } catch (e) {
       print("Error deleting schedule: $e");
-      return false; // Failed to delete schedule
+      return false;
     }
   }
 }
