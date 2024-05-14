@@ -21,6 +21,7 @@ class HomeScreen extends StatelessWidget {
                 onPressed: () => model.navigateToScheduledView(),
                 child: Text('Scheduled View'),
               ),
+              SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () => model.navigateToMyActivityView(),
                 child: Text('My Activity View'),

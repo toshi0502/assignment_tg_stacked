@@ -28,7 +28,7 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Schedule'),
+        title: const Text('Create New Schedule'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
